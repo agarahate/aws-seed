@@ -1,0 +1,15 @@
+{
+  "name": "AWS_SEED",
+  "version": "1.0.1",
+  "description": "Basic Application seed for aws development",
+  "main": "index.html",
+  "author": "Ankush Rahate",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-http-server": "^1.2.0",
+    "angular-route": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}

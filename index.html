@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="AWSapp">
+	<head>
+		<title>AWS seed</title>
+		<meta charset="utf-8">
+		<base href="/">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/png" href="images/favicon.ico">
+		
+		<!--Link Your css here-->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" href="stylesheets/index.css">
+		
+		<!--Link Your js here-->
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="node_modules/angular/angular.min.js"></script>
+		<script src="node_modules/angular-route/angular-route.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="scripts/routes.js"></script>
+		<script src="scripts/appController.js"></script>
+		<script src="scripts/modules/dashboard-controller.js"></script>
+		<script src="scripts/modules/file-controller.js"></script>
+		<script src="scripts/modules/edit-controller.js"></script>
+	</head>
+	<body  data-ng-controller="appController">
+		<div class="col-xs-12 header">
+			<div>
+				<img src="images/ge_logo_preview.png">
+				<span class="name">AWS seed</span>
+			</div>
+		</div>
+		<div class="content" ng-class="isOpen?'nav-md':'nav-sm'">
+			<div class="nav-col" ng-style="navStyle">
+				<span class="toggle-icon"><i class="fa fa-bars pointerSelect"  ng-click="toggleSideMenu()"></i></span>
+				<ul class="parent-item">
+					<li ng-repeat="item in menuItems" ng-click="gotoLocation(item)" ng-class="{'active-parent-class':currentParent==item.itemId}">
+						<i class="fa {{item.icon}}"></i>
+						<span ng-if="isOpen">{{item.label}}</span>
+						<ul class='child-item' ng-show="expandParent==item.itemId">
+							<li ng-repeat="obj in item.subMenu" ng-click="gotoLocation(obj,true,$event)" ng-class="{'active-child-class':currentChild==obj.itemId}">
+								<i class="fa {{obj.icon}}"></i>
+								<span ng-if="isOpen">{{obj.label}}</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="body-col" ng-style="bodyStyle">
+			<div ng-view></div>
+			</div>
+		</div>
+		<div class="col-xs-12 footer">
+			<span class="pull-right">
+				<span>&copy; 2017 Ankush Rahate</span>
+			</span>
+		</div>
+	</body>
+</html>

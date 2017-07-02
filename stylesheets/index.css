@@ -1,0 +1,34 @@
+body { font-size: 1.3em;background:green}
+body{margin:0px;}
+.header{background: cornflowerblue;padding: 0.56em 1em;}
+.header img{width: 3%;vertical-align: middle;}
+.header span.name{font-size: 1.5em;vertical-align: middle;color: white;}
+.footer{position: fixed;bottom: 0px;padding:0.195em 0.4em 0.2em 0px;background: black;color: white;}
+.nav-col{background: #7abbd4;position: fixed;transition:all 0.3s ease-in;}
+.nav-col ul.parent-item{list-style:none;margin: 0;padding: 0px;font-size: 1.4em;color: white;}
+.nav-col ul.parent-item li{padding: 0.2em 0px; border-bottom: 1px solid #cabebe;cursor:pointer;}
+.nav-col ul.parent-item li i{margin:0.2em;}
+.nav-sm ul.parent-item{text-align: -webkit-center;text-align: center;}
+.nav-md ul.parent-item li{padding: 0.2em 0.4em;}
+.nav-col ul.child-item{list-style:none;margin: 0;padding: 0px 0.5em 0px 0px;font-size: 0.7em;color: white;}
+.nav-col ul.child-item li{padding: 0.2em 0px; border-bottom: 0px;cursor:pointer;}
+.nav-col ul.child-item li i{margin:0.2em;}
+.nav-sm ul.child-item{text-align: -webkit-right;text-align: right;}
+.nav-md ul.child-item li{padding: 0.2em 2.4em;}
+.nav-sm .nav-col{width:4%;}
+.nav-md .nav-col{width:15%}
+.toggle-icon{padding: 0px 0px 0px 0.5em;font-size: 1.2em;cursor:pointer;}
+.toggle-icon i:hover{color:white;-ms-transform: rotate(180deg); /* IE 9 */-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */transform: rotate(180deg);-webkit-transition: all 0.2s; /* Safari */transition: all 0.2s}
+.toggle-icon i:not(:hover){color:black;-ms-transform: rotate(-180deg); /* IE 9 */-webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */transform: rotate(-180deg);-webkit-transition: all 0.2s; /* Safari */transition: all 0.2s}
+.label{font-size: 0.9em;}
+.body-col{background:#F1F1F1;position:relative;float:left;transition:all 0.3s ease-in;}
+.nav-sm .body-col{margin-left:4%}
+.nav-md .body-col{margin-left:15%}
+.active-parent-class{background:wheat;color:#2196F3;}
+.active-child-class{background:cornsilk;color:#9385fb;}
+@media screen and (max-width: 359px) {body { font-size: 0.2em; }}
+@media screen and (min-width: 360px) {body { font-size: 0.7em; }}
+@media screen and (min-width: 768px) {body { font-size: 1.3em; }}
+@media screen and (min-width: 1440px) {body { font-size: 1.4em; }}
+@media screen and (min-width: 2560px) {body { font-size: 2.6em; }}
+@media screen and (min-width: 4000px) {body { font-size: 4em; }}
